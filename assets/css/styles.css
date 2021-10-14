@@ -56,6 +56,11 @@ body{
     font-family: 'Fira Mono', monospace;
 }
 
+.two_columns{
+    display: flex;
+    justify-content: space-between;
+}
+
 i{
     font-size: 3.5rem;
     color: white;
@@ -165,6 +170,16 @@ i h1{
 }
 
 .class-layer p{
+    min-width: 130px;
+    background-color: white;
+    border-radius: 7px;
+    padding: 1rem;
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.9rem;
+    box-shadow: 1px 0px 10px 1px black;
+}
+
+.class-layer-small p{
     background-color: white;
     border-radius: 7px;
     padding: 1rem;
@@ -256,6 +271,18 @@ i h1{
 
 #orange{
     background-color: #EC8A41;
+}
+
+#blue{
+    background-color: #7795FB;
+}
+
+#yellow{
+    background-color:#F2E761; ;
+}
+
+#green{
+    background-color:#6DE68E;;
 }
 
 #purple-color{

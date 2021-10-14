@@ -146,7 +146,7 @@
             <i class='bx bx-terminal' ></i><h1>Capa de Aplicación</h1>
         </span>
         <div class="content-white-card">
-            <p>La capa de aplicación define Funciones (servicios) que se intercambian entre estaciones controladoras (Master) y estaciones remotas (Outstation).<br><b>Lasfunciones básicas de DNP3 son:</b></p>
+            <p>La capa de aplicación define Funciones (servicios) que se intercambian entre estaciones controladoras (Master) y estaciones remotas (Outstation).<br><b>Las funciones básicas de DNP3 son:</b></p>
         </div>  
     </div>
 
@@ -195,41 +195,137 @@
     <section class="container">
         <div class="card">
             <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="green-color">ENABLE_UNSOLICITED</h2></span>
-            <p class="p-command">Se usan en remotas modernas para activar el envío espontáneo.</p>
+            <p class="p-command">Se usan en e.remotas modernas para activar el envío espontáneo.</p>
         </div>
         <div class="card">
             <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="green-color">DISABLE_UNSOLICITED</h2></span>
-            <p class="p-command">Se usan en remotas modernas para desactivar el envió espontáneo. Si se desactiva la recogida de eventos se realiza por lectura de clase 1, 2,3.</p>
+            <p class="p-command">Se usan en e.remotas modernas para desactivar el envió espontáneo. Si se desactiva la recogida de eventos se realiza por lectura de clase 1, 2,3.</p>
         </div>
         <div class="card">
             <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="green-color">ASSIGN_CLASS</h2></span>
             <p class="p-command">Permite asignar a cada punto o tipo de punto una clase para los eventos que genera. Por lo general la e.remota ya los organiza, pero este servicio si se implementa le permite al master cambiar este orden.</p>
         </div>
     </section>
-    <section class="container">
+
+
+    <section class="container_3">
         <div class="card">
-            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="green-color">ENABLE_UNSOLICITED</h2></span>
-            <p class="p-command">Se usan en remotas modernas para activar el envío espontáneo.</p>
+            <div class="class-layer"><p id="purple"><br>Mensaje de usuario Tamaño:6144 bytes<br></p></div>
+            <div class="two_columns">
+                <div class="class-layer"><p id="orange">Fragmento Tamaño:2048 bytes</p></div>
+                <div class="class-layer"><p id="orange">Fragmento Tamaño:2048 bytes</p></div>
+                <div class="class-layer"><p id="orange">Fragmento Tamaño:2048 bytes</p></div>
+            </div>
         </div>
         <div class="card">
-            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="green-color">DISABLE_UNSOLICITED</h2></span>
-            <p class="p-command">Se usan en remotas modernas para desactivar el envió espontáneo. Si se desactiva la recogida de eventos se realiza por lectura de clase 1, 2,3.</p>
-        </div>
-        <div class="card">
-            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="green-color">ASSIGN_CLASS</h2></span>
-            <p class="p-command">Permite asignar a cada punto o tipo de punto una clase para los eventos que genera. Por lo general la e.remota ya los organiza, pero este servicio si se implementa le permite al master cambiar este orden.</p>
+            <div class="type-layer"><span class="icon-p" id="top"><i id="topi" class='bx bxs-bulb'></i><p id="longtext">En la capa de aplicacion los mensajes de usuario se divien en fragmentos,cada fregmento va tener 2048 bytes
+            </p></span></div>
         </div>
     </section>
 
     <section class="container_3">
         <div class="card">
-
+            <div class="class-layer"><p id="orange"><br>Fragmento Tamaño:2048 bytes<br></p></div>
+            <div class="two_columns">
+                <div class="class-layer"><p id="blue">FIR</p></div>
+                <div class="class-layer"><p id="blue">FIN</p></div>
+                <div class="class-layer"><p id="blue">CON</p></div>
+                <div class="class-layer"><p id="blue">UNS</p></div>
+                <div class="class-layer"><p id="blue">SEQ</p></div>
+            </div>
         </div>
         <div class="card">
-            <div class="type-layer"><span class="icon-p" id="top"><i id="topi" class='bx bxs-bulb'></i><p id="longtext">En la capa de aplicacion los mensajes de usuario se divien en fragmentos,cada fregmento va tener 2048 bytes
-            </p>
+            <div class="type-layer"><span class="icon-p" id="top"><i id="topi" class='bx bx-bulb'></i><p id="longtext">Cabeceras de los fragmentos DNP3
+                <br><b>FIR</b> = Primer mensaje en una secuencia.
+                <br><b>FIN</b> = Ultimo mensaje en una secuencia.
+                <br><b>CON</b> = El mensaje requiere confirmacion.
+                <br><b>UNS</b> = El mensaje es no solicitado.
+                <br><b>SEQ</b> = numero de secuencia (0 a 15).
+            </p></span></div>
         </div>
-
     </section>
+
+    <div class="header">
+        <span class="icon-h1">
+            <i class='bx bx-mail-send' ></i><h1>Funcion de Transporte</h1>
+        </span>
+        <div class="content-white-card">
+            <p>La función de transporte «trocea» los fragmentos en el extremo transmisor y los «ensambla» en el extremo receptor. A nivel de función de transporte se usa el término 'segmento'.</p>
+        </div>  
+    </div>
+
+    <section class="container_3">
+        <div class="card">
+            <div class="class-layer"><p id="orange"><br>Fragmento<br></p></div>
+            <div class="two_columns">
+                <div class="class-layer"><p id="yellow">Segmento Tamaño:249 bytes</p></div>
+                <div class="class-layer"><p id="yellow">Segmento Tamaño:249 bytes</p></div>
+                <div class="class-layer"><p id="yellow">Segmento Tamaño:249 bytes</p></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="type-layer"><span class="icon-p" id="top"><i id="topi" class='bx bxs-bulb'></i><p id="longtext">Cada segmento lleva un conjunto de bytes del fragmento y una cabecera de transporte. 
+            </p></span></div>
+        </div>
+    </section>
+
+    <section class="container_3">
+        <div class="card">
+            <div class="class-layer"><p id="yellow"><br>Segmento Tamaño:249 bytes<br></p></div>
+            <div class="two_columns">
+                <div class="class-layer"><p id="blue">FIR</p></div>
+                <div class="class-layer"><p id="blue">FIN</p></div>
+                <div class="class-layer"><p id="blue" style="width: 300px;">SEQ</p></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="type-layer"><span class="icon-p" id="top"><i id="topi" class='bx bx-bulb'></i></i><p id="longtext">Cabeceras de los segmentos
+                <br><b>FIR</b> = Bit que indica que este segmento es el primero de un fragmento.
+                <br><b>FIN</b> = Bit que indica que este segmento es el último de un fragmento.
+                <br><b>SEQ</b> = Contador incremental para garantizar que no se pierden o duplican segmentos intermedios con los bits FIR y FIN desactivados.
+            </p></span></div>
+        </div>
+    </section>
+
+    <div class="header">
+        <span class="icon-h1">
+            <i class='bx bx-transfer-alt' ></i><h1>Capa de enlace</h1>
+        </span>
+        <div class="content-white-card">
+            <p>La capa de enlace se encarga de tareas de direccionamiento y detección de errores (CRC).</p>
+        </div> 
+    </div>
+    <section class="container">
+        <div class="card">
+            <div class="class-layer"><p id="yellow"><br>Segmento Tamaño:249 bytes<br></p></div>
+            <div class="two_columns">
+                <div class="class-layer-small"><p id="green">0x05 1B</p></div>
+                <div class="class-layer-small"><p id="green">0x65 1B</p></div>
+                <div class="class-layer-small"><p id="green">Longitud Trama 1B</p></div>
+                <div class="class-layer-small"><p id="green">Codigo Control 1B</p></div>
+                <div class="class-layer-small"><p id="green">Destino 2B</p></div>
+                <div class="class-layer-small"><p id="green">Origen 2B</p></div>
+                <div class="class-layer-small"><p id="green">CRC 2B</p></div>
+                <div class="class-layer-small"><p id="green">Datos</p></div>
+                <div class="class-layer-small"><p id="green">CRC 16B</p></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="header">
+        <div class="content-white-card">
+            <p>Cabecera DNP3 - Son los diez primeros bytes de la trama:
+                <br><b>2 Bytes de inicio.</b>Cuyo valor es fijo(0x05,0,65).
+                <br><b>1 Byte con el tamaño de la trama.</b>No tiene en cuenta la cabecera, ni los CRC
+                <br><b>1 Byte con el codigo de control</b>
+                <br><b>2 bytes con la direccion de destino.</b>
+                <br><b>2 bytes con la direccion de origen.</b>
+                <br><b>2 bytes de CRC.</b>
+                <br><b>Datos.</b> cada 16 bytes de datos,asi como al final de la trama, se encontrara 2 bytes de CRC
+
+            </p>
+            
+        </div> 
+    </div>
 </body>
 </html>
