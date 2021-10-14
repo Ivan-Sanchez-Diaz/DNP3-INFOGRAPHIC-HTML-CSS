@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNP3-cheatsheets</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+</head>
+<body>
+    <div class="header">
+        <span class="icon-h1">
+            <i class='bx bx-station'></i><h1>DNP3(Distributed Network Protocol version 3)</h1>
+        </span>
+        <div class="content-white-card">
+            <p>Es un protocolo desarrollado para alcanzar interoperabilidad abierta 
+                y estándar entre elementos de subestaciones,y las estaciones principales
+                 de las compañias eléctricas. Los protocolos existentes carecian de <b>estampa de tiempo.</b>
+                 DNP ha sido ampliamente usado en grandes industrias dedicadas al tratamietno de aguas,petróleo y
+                    gas.</b></p>
+        </div>  
+    </div>
+    <section class="container">
+        <div class="card">
+            <span class="icon-h2"><i class='bx bxs-layout'></i><h2>Estructura Modular</h2></span>
+            <div class="user-layer"><p>User Application</p> </div>
+            <div class="user-layer"><p>Application Layer</p> </div>
+            <div class="user-layer"><p>Transport Function</p> </div>
+            <div class="user-layer"><p>Link Layer</p></div>
+            <div class="con-layer"><p>SERIAL<br>CHANNEL</p><p>TCP/IP<br>CHANNEL</p><p>UDP/IP<br>CHANNEL</p></div>
+        </div>
+        <div class="card">
+            <span class="icon-h2"><i class='bx bx-text'></i><h2>ipos de datos básicos en DNP3</h2></span>
+            <div class="type-layer"><span class="icon-p"><i class='bx bx-cube'></i><p>Entrada binarias</p></span></div>
+            <div class="type-layer"><span class="icon-p"><i class='bx bx-cube'></i><p>Salida binaria</p></span></div>
+            <div class="type-layer"><span class="icon-p"><i class='bx bx-cube'></i><p>Entrada analógica</p></span></div>
+            <div class="type-layer"><span class="icon-p"><i class='bx bx-cube'></i><p>Salida analógica</p></span></div>
+            <div class="type-layer"><span class="icon-p"><i class='bx bxs-cube'></i><p>Contadores</p></span></div>
+            <div class="type-layer"><span class="icon-p"><i class='bx bxs-cube'></i><p>Entrada binaria doble</p></span></div>
+        </div>
+        <div class="card" id="text">
+            <div class="type-layer"><span class="icon-p" id="top"><i id="topi" class='bx bxs-bulb'></i><p id="longtext">Cada dato DNP3 dentro de la base de datos de una estación remota se denomina <b>Punto</b> y se identifica por un <b>Índice.</b><br> El valor actual del punto se denomina valor estático.<br>
+                El punto puede generar eventos por cambios de valor o ante la recepción de comandos.
+                Los eventos pueden almacenarse en una de las 3 clases que permite DNP3 (Clase 1, Clase 2 o Clase 3).
+            </p>
+
+            </p></span></div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="card">
+            <span class="icon-h2"><i class='bx bxs-layer' ></i><h2>Clases de datos en DNP3</h2></span>
+            <div class="type-class">
+                <div class="class-layer"><p id="purple">Class<br>0<br>Static Value</p> </div>
+                <div class="class-layer"><p id="orange">Class<br>1<br>Events</p>  </div>
+                <div class="class-layer"><p id="orange">Class<br>2<br>Events</p>  </div>
+                <div class="class-layer"><p id="orange">Class<br>3<br>Events</p> </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="type-layer"><span class="icon-p" ><i class='bx bxs-search-alt-2'></i><p id="longtext">Para identificar el formato de un punto de la base de datos de DNP3 dentro de un mensaje se usan 3 propiedades:</p>
+            </span>
+            </div>
+            <div class="type-layer"><span class="icon-p"><i class='bx bx-search-alt-2' ></i><p><b>Grupo: </b>Identifica el tipo de información que viaja en el mensaje. Por ejemplo, valor actual de entrada binaria.</p></span></div>
+            <div class="type-layer"><span class="icon-p"><i class='bx bx-search-alt-2' ></i><p><b>Variación: </b>formato de la información que indica si viaja la calidad y/o marca de tiempo o el formato de los datos analóg</p></span></div>
+            <div class="type-layer"><span class="icon-p"><i class='bx bx-search-alt-2' ></i><p><b>Índice: </b>dirección en la base de datos.</p></span></div>
+        </div>
+    </section>
+
+    <div class="header">
+        <span class="icon-h1">
+            <i class='bx bx-network-chart'></i><h1>Topologia</h1>
+        </span>
+        <div class="content-white-card">
+
+            <span class="topo-span">
+                <p>Mapa lógico de la red para intercambiar datos.</b></p><i style="color: #303030;" class='bx bx-desktop'></i><p>(Master)</p>
+                <i style="color: #303030;" class='bx bxs-book-content'></i><p>(Outstation)</p>
+            </span>
+        </div>  
+    </div>
+
+
+    <section class="container">
+        <div class="card topo">
+            <i class='bx bx-desktop'></i>
+            <i class='bx bx-right-arrow-alt'></i>
+            <div class="column">
+                <i class='bx bxs-book-content'></i>
+            </div>
+        </div>
+
+        <div class="card topo">
+            <i class='bx bx-desktop'></i>
+            <i class='bx bx-right-arrow-alt'></i>
+            <div class="column">
+                <i class='bx bxs-book-content'></i>
+                <i class='bx bxs-book-content'></i>
+                <i class='bx bxs-book-content'></i>
+            </div>
+        </div>
+
+        <div class="card topo">
+            <div class="column">
+                <i class='bx bx-desktop'></i>
+                <i class='bx bx-desktop'></i>
+            </div>
+            <i class='bx bx-right-arrow-alt'></i>
+            <i class='bx bxs-book-content'></i>
+        </div>
+
+        <div class="card topo">
+            <i class='bx bx-desktop'></i>
+            <i class='bx bx-right-arrow-alt'></i>
+            <div class="column">
+                <i class='bx bxs-book-content'></i>
+                <i class='bx bxs-book-content'></i>
+            </div>
+            <div class="column">
+                <i class='bx bx-right-arrow-alt'></i>
+                <i id="gray-color" class='bx bx-right-arrow-alt'></i>
+            </div>
+            <div class="column">
+                <i class='bx bxs-book-content'></i>
+                <i class='bx bxs-book-content'></i>
+                <i id="gray-color" class='bx bxs-book-content'></i>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <div class="header">
+        <span class="icon-h1">
+            <i class='bx bx-terminal' ></i><h1>Capa de Aplicación</h1>
+        </span>
+        <div class="content-white-card">
+            <p>La capa de aplicación define Funciones (servicios) que se intercambian entre estaciones controladoras (Master) y estaciones remotas (Outstation).<br><b>Lasfunciones básicas de DNP3 son:</b></p>
+        </div>  
+    </div>
+
+    <section class="container">
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="purple-color">READ</h2></span>
+            <p class="p-command">Lectura de valor estático o eventos.</p>
+        </div>
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="purple-color" >WRITE</h2></span>
+            <p class="p-command">Escritura de atributos del equipo.</p>
+        </div>
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2>SELECT</h2></span>
+            <p class="p-command">Servicio de control de selección.</p>
+        </div>
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2>OPERATE</h2></span>
+            <p class="p-command">Orden tras selección.</p>
+        </div>
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2>DIRECT_OPERATE</h2></span>
+            <p class="p-command">Orden directa sin selección.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="yellow-color">IMMED_FREEZE</h2></span>
+            <p class="p-command">Orden de congelado inmediato.</p>
+        </div>
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="yellow-color">FREEZE_CLEAR</h2></span>
+            <p class="p-command">Congelado y reset a 0.</p>
+        </div>
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="restart-color">COLD_RESTART</h2></span>
+            <p class="p-command">Reset total de la estación remota.</p>
+        </div>
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="restart-color">WARM_RESTART</h2></span>
+            <p class="p-command">Reset parcial de la estación remota.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="green-color">ENABLE_UNSOLICITED</h2></span>
+            <p class="p-command">Se usan en remotas modernas para activar el envío espontáneo.</p>
+        </div>
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="green-color">DISABLE_UNSOLICITED</h2></span>
+            <p class="p-command">Se usan en remotas modernas para desactivar el envió espontáneo. Si se desactiva la recogida de eventos se realiza por lectura de clase 1, 2,3.</p>
+        </div>
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="green-color">ASSIGN_CLASS</h2></span>
+            <p class="p-command">Permite asignar a cada punto o tipo de punto una clase para los eventos que genera. Por lo general la e.remota ya los organiza, pero este servicio si se implementa le permite al master cambiar este orden.</p>
+        </div>
+    </section>
+    <section class="container">
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="green-color">ENABLE_UNSOLICITED</h2></span>
+            <p class="p-command">Se usan en remotas modernas para activar el envío espontáneo.</p>
+        </div>
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="green-color">DISABLE_UNSOLICITED</h2></span>
+            <p class="p-command">Se usan en remotas modernas para desactivar el envió espontáneo. Si se desactiva la recogida de eventos se realiza por lectura de clase 1, 2,3.</p>
+        </div>
+        <div class="card">
+            <span class="app-command"><i class='bx bx-pyramid'></i></i><h2 id="green-color">ASSIGN_CLASS</h2></span>
+            <p class="p-command">Permite asignar a cada punto o tipo de punto una clase para los eventos que genera. Por lo general la e.remota ya los organiza, pero este servicio si se implementa le permite al master cambiar este orden.</p>
+        </div>
+    </section>
+
+    <section class="container_3">
+        <div class="card">
+
+        </div>
+        <div class="card">
+            <div class="type-layer"><span class="icon-p" id="top"><i id="topi" class='bx bxs-bulb'></i><p id="longtext">En la capa de aplicacion los mensajes de usuario se divien en fragmentos,cada fregmento va tener 2048 bytes
+            </p>
+        </div>
+
+    </section>
+</body>
+</html>
