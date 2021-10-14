@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+
+:root {
+    --header-height: 3rem;
+    
+}  
+
+*,::before,::after{
+    box-sizing: border-box;
+  }
+  
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background: #151515;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+.header{
+    padding-inline: 2rem;
+    margin: 2rem;
+    padding: 1rem;  
+    background-color: #303030;
+    border-radius: 7px;
+    box-shadow: 1px 0px 40px 10px black;
+
+}
+
+.header h1{
+    color: white;
+    font-family: 'Fira Mono', monospace;
+}
+
+.header p{
+    text-align: justify;
+    color: white;
+    font-family: 'Fira Mono', monospace;
+}
+
+.content-white-card{
+    margin-inline: 2rem;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.content-white-card p{
+    
+    padding: 2rem;
+    text-align: justify;
+    color:#303030;
+    font-family: 'Fira Mono', monospace;
+}
+
+.two_columns{
+    display: flex;
+    justify-content: space-between;
+}
+
+i{
+    font-size: 3.5rem;
+    color: white;
+}
+
+i h1{
+    font-size: 2rem;
+}
+  
+.icon-h1{
+    padding-inline: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+  
+.icon-h2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icon-h2 i{
+    font-size: 2rem;
+}
+
+.icon-p{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icon-p i{
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #303030;
+}
+  
+.row{
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    margin:2rem;
+    gap: 1rem;
+    flex-wrap: nowrap;
+}
+
+.container > *{
+    flex-basis: 100%;
+}
+
+.container_3{
+    display: flex;
+    flex-direction: row;
+    margin:2rem;
+    gap: 1rem;
+    flex-wrap: nowrap;
+}
+
+.container_3 > *:nth-child(1){
+    flex: 1 1 70%;
+}
+
+.container_3 > *:nth-child(2){
+    flex: 1 1 30%;
+}
+
+.card{
+    background: #303030;
+    border-radius: 7px;
+    padding: 2rem;
+    box-shadow: 1px 0px 10px 1px black;
+}
+
+.card h2{
+    color: white;
+    font-family: 'Fira Mono', monospace;
+    font-size: 1rem;
+}
+
+.user-layer{
+    display: flex;
+    background-color: white;
+    margin-inline: 0rem;
+    margin-bottom: 1rem;
+    padding: 0.1rem 4rem 0.1rem 4rem;
+    border-radius: 3px;
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.9rem;
+    color: #303030;
+    justify-content: space-around;
+}
+
+.type-class{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.type-class > *{
+    flex-basis: 100%;
+}
+
+.class-layer p{
+    min-width: 130px;
+    background-color: white;
+    border-radius: 7px;
+    padding: 1rem;
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.9rem;
+    box-shadow: 1px 0px 10px 1px black;
+}
+
+.class-layer-small p{
+    background-color: white;
+    border-radius: 7px;
+    padding: 1rem;
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.9rem;
+    box-shadow: 1px 0px 10px 1px black;
+}
+
+.type-layer{
+    display: flex;
+    background-color: white;
+    margin-inline: 0rem;
+    margin-bottom: 1rem;
+    padding: 0.1rem 4rem 0.1rem 1rem;
+    border-radius: 3px;
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.9rem;
+    color: #303030;
+    justify-content: flex-start;
+}
+
+
+.con-layer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.con-layer p{
+    background-color: white;
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.9rem;
+    border-radius: 7px;
+    padding: 1rem;
+
+}
+
+.app-command{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.app-command i{
+    font-size: 1.6rem;
+    margin-right: 0.4rem;
+}
+
+
+.app-command h2{
+    color:#EC8A41;
+}
+
+.topo-span{
+    display: flex;
+    align-items: center;
+}
+
+.p-command{
+    margin: 0;
+    color: white;
+    font-family: 'Fira Mono', monospace;
+}
+
+.topo{
+    display: flex;
+    align-items: center;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+#longtext{
+    text-align: justify;
+}
+
+#top{
+    align-items: flex-start;
+}
+
+#topi{
+    margin-top: 1rem;
+}
+
+#purple{
+    background-color: #A471B9;
+}
+
+#orange{
+    background-color: #EC8A41;
+}
+
+#blue{
+    background-color: #7795FB;
+}
+
+#yellow{
+    background-color:#F2E761; ;
+}
+
+#green{
+    background-color:#6DE68E;;
+}
+
+#purple-color{
+    color: #A471B9;
+}
+
+#yellow-color{
+    color: #F2E761;
+}
+
+#restart-color{
+    color: #7795FB;
+}
+
+#green-color{
+    color:#6DE68E;
+}
+
+#gray-color{
+    color:#303030;
+}
